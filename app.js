@@ -74,23 +74,40 @@ passport.deserializeUser(function (id, done) {
 
 // ENDPOINTS
 app.get("/", (req, res) => {
-  const params = {};
-  res.status(200).render("home.html", params);
+  if (req.isAuthenticated()) {
+    let isLoggedIn = 1;
+    res.status(200).render("home.ejs", { info: isLoggedIn });
+  } else {
+    let isLoggedIn = 0;
+    res.status(200).render("home.ejs", { info: isLoggedIn });
+  }
 });
 
 app.get("/contact", (req, res) => {
-  const params = {};
-  res.status(200).render("contact.html", params);
+  if (req.isAuthenticated()) {
+    const params = {};
+    res.status(200).render("contact.html", params);
+  } else {
+    res.status(200).redirect("/login");
+  }
 });
 
 app.get("/services", (req, res) => {
-  const params = {};
-  res.status(200).render("services.html", params);
+  if (req.isAuthenticated()) {
+    const params = {};
+    res.status(200).render("services.html", params);
+  } else {
+    res.status(200).redirect("/login");
+  }
 });
 
 app.get("/about", (req, res) => {
-  const params = {};
-  res.status(200).render("about.html", params);
+  if (req.isAuthenticated()) {
+    const params = {};
+    res.status(200).render("about.html", params);
+  } else {
+    res.status(200).redirect("/login");
+  }
 });
 
 app.post("/contact", (req, res) => {
@@ -189,38 +206,18 @@ app.get("/logout", function (req, res, next) {
     if (err) {
       return next(err);
     }
-    res.redirect("/login");
+    res.redirect("/");
   });
 });
 
 // Profile section
 app.get("/profile", (req, res) => {
   if (req.isAuthenticated()) {
-    console.log(req.user);
     res.render("profile.ejs", { userInfo: req.user });
   } else {
     res.redirect("/login");
   }
 });
-
-// app.post("/signup", (req, res) => {
-//   let myData = new User(req.body);
-//   myData
-//     .save()
-//     .then(() => {
-//       User.findOne()
-//         .sort({ _id: -1 })
-//         .exec((err, signup) => {
-//           if (err) {
-//             console.log(err);
-//             res.status(400).send("Unable to get last inserted ID");
-//           }
-//         });
-//     })
-//     .catch(() => {
-//       res.status(400).send("Unable to save item to the Database");
-//     });
-// });
 
 // Port configuration, works in both dev mode and deployment mode
 let port = process.env.PORT;
@@ -229,5 +226,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port, () => {
-  console.log(`Server running at port ${port}`);
+  console.log(`Server running at port http://localhost:${port}`);
 });

@@ -43,7 +43,6 @@
           
     </script> -->
 
-
     <section class="main1">
         <nav>
             <ul>
@@ -57,16 +56,33 @@
                     <input type="text" name="search" id="search" placeholder="Search this website"> </i>
                 <button class="btn btn-sm">Search</button>
 
-                <button onclick="openLoginForm()" class="btn btn-sm login">LogIn/SignUp</button>
+                <button onclick="openLoginForm()" class="btn btn-sm login">
+                    <% if (info === 0) { %>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <i class="fa fa-key" style="padding-left: 5px;"></i>
+                            <p>Login</p>
+                        </div>
+                    <%} else { %>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <i class="fa fa-user" style="padding-left: 5px;"></i>
+                            <p>Account</p>
+                        </div>
+                    <% } %>
+                        
+                </button>
+                <!-- <button onclick="openLoginForm()" class="btn btn-sm login">
+                    <%- info === 0 ? "Login" : "Account" %>
+                </button> -->
+
                 <div class="login-form-container" id="login-form-container">
 
             </ul>
             <hr>
         </nav>
         <section class="sec1">
-            <div class="top">
+            <!-- <div class="top">
                 <h1>THE G<span>Y</span>M</h1>
-            </div>
+            </div> -->
             <div class="middle">
                 <h3>
                     <div class="style">BUILD</div> <span>YOUR BODY</span>
