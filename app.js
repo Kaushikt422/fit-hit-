@@ -101,6 +101,15 @@ app.get("/services", (req, res) => {
   }
 });
 
+app.get("/source_payment", (req, res) => {
+  if (req.isAuthenticated()) {
+    const params = {};
+    res.status(200).render("source_payment.html", params);
+  } else {
+    res.status(200).redirect("/login");
+  }
+});
+
 app.get("/about", (req, res) => {
   if (req.isAuthenticated()) {
     const params = {};
@@ -139,6 +148,14 @@ app.get("/login", (req, res) => {
     res.status(200).render("login.html");
   }
 });
+
+// app.get("/source_payment", (req, res) => {
+//   if (req.isAuthenticated()) {
+//     res.redirect("/profile");
+//   } else {
+//     res.status(200).render("login.html");
+//   }
+// });
 
 // Handle login form submission
 app.post("/login", (req, res) => {
@@ -222,7 +239,7 @@ app.get("/profile", (req, res) => {
 // Port configuration, works in both dev mode and deployment mode
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 8000;
+  port = 3000;
 }
 
 app.listen(port, () => {

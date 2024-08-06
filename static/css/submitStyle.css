@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Merriweather&family=Noto+Serif&family=Poppins&family=Roboto&family=Ubuntu&family=Yeon+Sung&display=swap");
 
 nav i {
-  margin-left: 200px;
+  margin-left: 100px;
 }
 
 .main {
@@ -11,10 +11,19 @@ nav i {
   width: 100%;
   color: white;
   font-size: 18px;
-  background: rgba(0, 0, 0, 0.3) url("/static/img/submitBg5.jpg") center/cover
-    no-repeat;
-  z-index: 101;
   background-blend-mode: darken;
+  background-size: cover;
+}
+
+.main::before{
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.3) url('/static/img/bgg2.jpg') center/cover no-repeat;
+  background-blend-mode: darken;
+  filter: blur(5px);
   background-size: cover;
 }
 

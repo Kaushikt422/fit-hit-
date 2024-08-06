@@ -221,6 +221,356 @@ nav {
     place-content: center;
 }
 
+#s h1{
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: -100px;
+    font-family: 'Yeon Sung', cursive;
+}
+
+.container {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    color: var(--textColor);
+}
+
+.products {
+    width: 100%;
+    align-self: center;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.product {
+    position: relative;
+    background-color: var(--sectionBack);
+    width: 350px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.image {
+    width: 100%;
+    height: 60%;
+    display: grid;
+    place-content: center;
+}
+
+.image img {
+    width: 110px;
+}
+
+
+.namePrice {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.namePrice h3 {
+    font-size: 2em;
+    text-transform: capitalize;
+    color: var(--textColor);
+}
+
+.namePrice span {
+    font-size: 1.5em;
+    color: var(--starColor);
+}
+
+.product p {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.stars svg {
+    font-size: 1.3em;
+    color: var(--starColor);
+}
+
+.bay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.bay button {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--textColor);
+    color: var(--sectionBack);
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.bay button:hover {
+    transform: scale(1.1);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Ubuntu&family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Ubuntu&family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700;900&family=Raleway:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+:root {
+    --bodyBack: #ffeaed;
+    --textColor: #1b2741;
+    --starColor: #f67034;
+    --sectionBack: #f7f6f9;
+}
+
+:root {
+    /*===== Colors =====*/
+    --card-01-color-01: #ffb200;
+    --card-01-color-02: #ff9700;
+    --card-02-color-01: #96c110;
+    --card-02-color-02: #80ad0a;
+    --card-03-color-01: #64b2f2;
+    --card-03-color-02: #489ed9;
+    --card-body-bg-color: #fff;
+    --text-disabled-color: #b2b2b2;
+    --icon-disabled-color: #ff0404;
+    --body-bg-color: #d0e1ed;
+
+    /*===== Fonts =====*/
+    --poppins-font: 'Poppins', sans-serif;
+    --bebas-font: 'Bebas Neue', cursive;
+}
+
+nav {
+    position: sticky;
+}
+
+.nav-top {
+    background-color: rgb(33, 33, 33);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-family: 'Yeon Sung';
+    background-blend-mode: darken;
+    position: sticky;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+}
+
+.top1 {
+    top: 0;
+    left: 0;
+    height: 75vh;
+    width: 100%;
+    color: black;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.3) url('/static/img/sevbg.png') center/cover no-repeat;
+    background-blend-mode: darken;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line-1 hr {
+    height: 4px;
+    border: 0;
+    background: #da291c;
+}
+
+.top1 .inner1 {
+    background-color: rgb(255, 255, 255);
+    height: 70vh;
+    width: 65%;
+}
+
+.top1 .inner2 {
+    padding: 20px;
+    display: flex;
+}
+
+.inner2 img {
+    padding-right: 20px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+.inner-sec3 {
+    display: flex;
+    margin: 20px;
+}
+
+.sec3 h1 {
+    font-family: 'Yeon Sung';
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sec3 .col {
+    padding: 30px;
+    padding-top: 0;
+    margin: 0 40px;
+    width: 255px;
+}
+
+.sec3 .col .inner-col {
+    margin: -29px;
+    padding: 0;
+}
+
+.sec3 .col .inner-col-dblue {
+    position: relative;
+    z-index: -100;
+    padding: 20px 25px;
+    border: 1px solid gray;
+    border-top: 4px solid rgb(0, 79, 113);
+}
+
+.sec3 .col .inner-col-lblue {
+    position: relative;
+    z-index: -100;
+    padding: 20px 25px;
+    border: 1px solid gray;
+    border-top: 4px solid rgb(0, 126, 164);
+}
+
+.sec3 .col .inner-col-yellow {
+    position: relative;
+    z-index: -100;
+    padding: 20px 25px;
+    border: 1px solid gray;
+    border-top: 4px solid rgb(198, 146, 20);
+}
+
+.sec3 i {
+    border-radius: 50%;
+    color: white;
+    padding: 16px;
+    font-size: 22px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dblue {
+    background-color: rgb(0, 79, 113);
+    border: 3px solid rgb(0, 79, 113);
+}
+
+.lblue {
+    background-color: rgb(0, 126, 164);
+    border: 3px solid rgb(0, 126, 164);
+}
+
+.yellow {
+    background-color: rgb(198, 146, 20);
+    border: 3px solid rgb(198, 146, 20);
+}
+
+.box2 {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.inner-col h1 {
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+}
+
+.bottom {
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.line-2 hr {
+    height: 3px;
+    border: 0;
+    background: #007ea4;
+}
+
+.inner3 i {
+    border-radius: 50%;
+    color: white;
+    background-color: #007ea4;
+    padding: 16px;
+    font-size: 29px;
+    margin: -31px auto;
+    margin-left: 50vw;
+}
+
+.inner-box-2 {
+    padding-bottom: 20px;
+}
+
+.bottom h1 {
+    text-align: center;
+    font-family: 'Yeon Sung', cursive;
+    font-size: 2rem;
+}
+
+.bottom p {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.inner3 {
+    padding: -40px;
+}
+
+#shubham {
+    background-color: var(--bodyBack);
+    min-height: 160vh;
+
+    display: flex;
+    place-content: center;
+}
+
+#s h1{
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: -100px;
+    font-family: 'Yeon Sung', cursive;
+}
+
 .container {
     width: 80vw;
     height: 80vh;
@@ -359,14 +709,11 @@ nav {
 }
 
 #shubham2 .heading {
-    justify-content: center;
+    font-size: 3rem;
     text-align: center;
-    margin-top: 10px;
     padding: 20px;
-    font-family: "Roboto";
-    font-size: 45px;
-    font-weight: 600;
-    color: black;
+    margin-bottom: -40px;
+    font-family: 'Yeon Sung', cursive;
 }
 
 #shubham2 .main-container {
@@ -400,8 +747,26 @@ nav {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
     margin-top: 60px;
+    display:  flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px;
+    max-height: 500px;
 }
+.div_btn18{
+    display: block;
+    text-align: center;
+}
+.card-sub-list ul{
+    margin-left: 35px;
+    display :block;
+    margin-bottom: 17%;
 
+}
+.card-sub-list ul li{
+  margin-bottom: 5%;
+}
 #shubham2 .card-body .top-shape {
     clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 75%, 0 50%);
     height: 200px;
@@ -475,61 +840,20 @@ nav {
 }
 
 #shubham2 .card-body .card-content {
-    display: flex;
+  
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+ 
     transform: translateY(-30px);
 }
 
-#shubham2 .card-body .card-content ul {
-    width: 100%;
-    font-family: var(--poppins-font);
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 0 20px;
-}
 
-#shubham2 .card-body .card-content ul li {
-    list-style: none;
-    font-size: 0.95em;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 35px;
-    white-space: nowrap;
-}
 
-#shubham2 .card-body .card-content ul li i {
-    font-size: 1.9em;
-    margin-left: 15px;
-}
-
-#shubham2 .card-01 .card-body .card-content ul .active i {
-    color: var(--card-01-color-01);
-}
-
-#shubham2 .card-02 .card-body .card-content ul .active i {
-    color: var(--card-02-color-01);
-}
-
-#shubham2 .card-03 .card-body .card-content ul .active i {
-    color: var(--card-03-color-01);
-}
-
-#shubham2 .card-body .card-content ul .disabled {
-    color: var(--text-disabled-color);
-}
-
-#shubham2 .card-body .card-content ul .disabled i {
-    color: var(--icon-disabled-color);
-}
-
-#shubham2 .card-content .buy-btn {
+.buy-btn {
     font-family: var(--bebas-font);
     border: none;
     outline: none;
+    width: 70%;
     padding: 0 28px;
     border-radius: 15px;
     text-transform: uppercase;
@@ -538,27 +862,26 @@ nav {
     margin-bottom: 40px;
 }
 
-#shubham2 .card-01 .card-content .buy-btn {
+ .btn1 {
     background: linear-gradient(var(--card-01-color-01) 50%, var(--card-01-color-02) 50%);
+    text-align: bottom;
 }
-
-#shubham2 .card-02 .card-content .buy-btn {
+ .btn2 {
     background: linear-gradient(var(--card-02-color-01) 50%, var(--card-02-color-02) 50%);
 }
 
-#shubham2 .card-03 .card-content .buy-btn {
+ .btn3 {
     background: linear-gradient(var(--card-03-color-01) 50%, var(--card-03-color-02) 50%);
 }
 
-#shubham2 .card-01 .card-content .buy-btn:hover {
+ .btn1:hover {
     background: linear-gradient(var(--card-01-color-02) 50%, var(--card-01-color-01) 50%);
 }
-
-#shubham2 .card-02 .card-content .buy-btn:hover {
+ .btn2:hover {
     background: linear-gradient(var(--card-02-color-02) 50%, var(--card-02-color-01) 50%);
 }
 
-#shubham2 .card-03 .card-content .buy-btn:hover {
+ .btn3:hover {
     background: linear-gradient(var(--card-03-color-02) 50%, var(--card-03-color-01) 50%);
 }
 

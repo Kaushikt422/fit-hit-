@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style.css">
     <title>FitHit</title>
-    <link rel="icon" href="../static/img/icon.png" type="image/x-icon">
+    <!-- <link rel="icon" href="../static/img/icon.png" type="image/x-icon"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
@@ -19,29 +19,6 @@
 </head>
 
 <body>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        $(window).scroll(function() {
-            var hT = $('.wrapper').offset().top,
-                hH = $('.wrapper').outerHeight(),
-                wH = $(window).height(),
-                wS = $(this).scrollTop();
-          
-            if (wS > (hT + hH - wH)) {
-              $('.wrapper').prop('Counter', 0).animate({
-                Counter: $('.wrapper').text()
-              }, {
-                duration: 4000,
-                easing: 'swing',
-                step: function(now) {
-                  $('.wrapper').text(Math.ceil(now));
-                }
-              });
-            }
-          });
-          
-    </script> -->
 
     <section class="main1">
         <nav>
@@ -57,18 +34,18 @@
                 <button class="btn btn-sm">Search</button>
 
                 <button onclick="openLoginForm()" class="btn btn-sm login">
-                    <% if (info === 0) { %>
+                    <% if (info===0) { %>
                         <div style="display: flex; align-items: center; gap: 5px;">
                             <i class="fa fa-key" style="padding-left: 5px;"></i>
                             <p>Login</p>
                         </div>
-                    <%} else { %>
-                        <div style="display: flex; align-items: center; gap: 5px;">
-                            <i class="fa fa-user" style="padding-left: 5px;"></i>
-                            <p>Account</p>
-                        </div>
-                    <% } %>
-                        
+                        <%} else { %>
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <i class="fa fa-user" style="padding-left: 5px;"></i>
+                                <p>Account</p>
+                            </div>
+                            <% } %>
+
                 </button>
                 <!-- <button onclick="openLoginForm()" class="btn btn-sm login">
                     <%- info === 0 ? "Login" : "Account" %>
@@ -99,7 +76,7 @@
     </section>
 
     <section class="outerSwiper">
-        <h2>Heading Text Here</h2>
+        <h2>Highlights of GYM</h2>
         <!-- <div class="border-top"></div>
         <div class="border-left"> -->
         <div class="top-left-right-bottom">
@@ -107,32 +84,30 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="../static/img/rand/1.jpg" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <img src="../static/img/rand/2.jpg" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            <img src="../static/img/rand/3.jpg" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            <img src="../static/img/rand/4.jpg" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                            <img src="../static/img/rand/5.jpg" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                            <img src="../static/img/rand/6.jpg" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                            <img src="../static/img/rand/7.jpg" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                            <img src="../static/img/rand/8.jpg" />
                         </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                        </div>
+
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -252,13 +227,11 @@
         });
     </script>
 
-
     <script>
         function openLoginForm() {
             window.location.href = "/login";
         }
     </script>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
     </script>
